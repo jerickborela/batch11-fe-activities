@@ -1,0 +1,55 @@
+@import url(//db.onlinewebfonts.com/c/bd9805cba4fdbd10e6f9d097dab9225f?family=Chalkduster);
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Chalkduster";
+  background-image: url(./img/chalkboard.jpg);
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.container {
+  padding: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#board {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-bottom: 30px;
+}
+
+.cell {
+  height: 200px;
+  width: 200px;
+  font-size: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+button {
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Chalkduster";
+  border: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
