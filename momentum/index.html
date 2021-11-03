@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jecky's Momentum App</title>
+</head>
+<body>
+    <!--User Story 1-->
+    <div id="user1">
+        <h2>What is your name?</h2>
+        <input type="text" id="name">
+    </div>
+ 
+    <div class="mainContainer" id="mainContainer">
+        <!--User Story 2 & 3-->
+        <div class="part1">
+            <div>Links</div>
+            <div>Weather</div>
+        </div>
+        <div id="userStory23" class="part2">
+            <h1 id="time"></h1>
+            <h2 id="greet">Good Evening</h2>
+        </div>
+            <!--User Story 4-->
+        <div class="part3">    
+            <h1>What's your focus today?</h1>
+            <form id="focusContainer">
+                <input id="focus" type="text">
+            </form>
+            <p id="focusP"></p>
+        </div>
+            <!--User Story 5-->
+        <div class="part4">
+            <div id="bgContain">
+                <p id="backgroundWidget">Change background</p>
+            </div>
+            <div id="quoteContainer">
+                <p id="quote"></p>
+                <button id="addQuote">Add Quote</button>
+                <input type="text" id="inputQuote">
+            </div>
+            <!--User Story 6-->
+            <div id="toDos">
+                <p id="ToDoWidget">To Dos</p>
+            </div>
+        </div>       
+    </div>
+
+    <div id="toDoModal" class="toDoModal">
+         <div id="toDoList" class="toDoList">
+            <div class="modalClose">+</div>
+            <h1>To Do</h1>
+            <div>
+            <input id="inputField" type="text"><button id="addToDo">+</button>
+            <div class="to-dos" id="toDoContainer"></div>
+            </div>
+        </div> 
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

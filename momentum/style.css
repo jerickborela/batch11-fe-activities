@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Gowun Dodum", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("./img/nature1.jpg");
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+#user1 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0 0 0;
+  border: 0 0 0 0;
+  display: flex;
+}
+
+#user1 h2 {
+  color: white;
+  font-size: 64px;
+}
+
+#name {
+  width: 50%;
+  padding-top: 4px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+.mainContainer {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+}
+
+.part1, .part2, .part3, .part4 {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.part1 {
+  justify-content: space-between;
+}
+
+/*User Story 2 & 3 */
+.part2 {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#time {
+  font-size: 17vh;
+  margin-bottom: 1vh;
+}
+
+#greet {
+  font-size: 5vh;
+  margin-top: 1vh;
+}
+
+.part3 {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#focus {
+  width: 100%;
+  padding-top: 4px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+#focusP {
+  font-size: 2.25em;
+}
+
+.part4 {
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+#bgContain {
+  flex: 1;
+  display: flex;
+}
+
+#backgroundWidget {
+  cursor: pointer;
+}
+
+#quoteContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addQuote {
+  width: 10%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#inputQuote {
+  width: 100%;
+  padding-top: 4px;
+  display: none;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+#toDos {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#toDoWidget {
+  background: transparent;
+  height: 1vh;
+  cursor: pointer;
+}
+
+#toDoModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  display: none;
+}
+
+#toDoList {
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  text-align: center;
+  overflow: auto;
+  border-radius: 5px;
+  display: none;
+  top: 54%;
+  left: 82%;
+  overflow-x: hidden;
+}
+
+#toDoList h1 {
+  color: black;
+}
+
+#inputField {
+  color: black;
+  width: 50%;
+  padding-top: 4px;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #070000;
+  font-size: 1em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+#toDoContainer p {
+  color: black;
+  font-size: 1.5em;
+}
+
+#addToDo {
+  color: black;
+  font-size: 1.5em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.modalClose {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  transform: rotate(45deg);
+  font-size: 42px;
+  cursor: pointer;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

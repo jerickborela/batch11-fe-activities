@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story 5</title>
+</head>
+<body>
+    <p id="quote"></p>
+    
+    <script>
+        var quoteArray = [
+            "The world isn’t perfect. But it’s there for us, doing the best it can….that’s what makes it so damn beautiful. – Roy Mustang","Giving up is what kills people. – Hellsing", "No matter how deep the night, it always turns to day, eventually. – One Piece"
+        ];
+        let quote = document.getElementById("quote");
+        var i = Math.floor(quoteArray.length*Math.random())
+        quote.innerText = quoteArray[i];
+    </script>
+</body>
+</html>
