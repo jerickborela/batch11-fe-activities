@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">
+       <div class="intro">
+           <h1>Which Genre?</h1>
+           <p>Music is one of the universal languages. No matter where you are and where you're from, you can connect with anyone with the help of music. Let's find out your music preference!</p>
+       </div>
+       <form class="form-area" action="">
+           <fieldset class="personal-info">
+               <legend>Personal Information</legend>
+               <label for="name" id="name-label">Full Name </label>
+                <input type="text" id="name" placeholder="Type in your full name">
+                <label for="email" id="email-label"> Email Address </label>
+                <input type="email" id="email" placeholder="Enter your email address">
+                <label for="number" id="number-label" min="0" max="100"> Age </label>
+                <input type="number" id="number" placeholder="Enter your age">
+                <label for="dropdown"> Gender </label>
+                <select id="dropdown">
+                    <option value="option1">Male</option>
+                    <option value="option2">Female</option>
+                    <option value="option3">Prefer not say</option>
+                </select>
+           </fieldset>
+           <fieldset class="genre">
+                <legend>Which of the indicated music genres do you prefer? (1-not at all, 5- very much)</legend>
+                <table class="table">
+                    <thead>
+                        <th>Genre</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Genre">Pop</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio1"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio1"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio1"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio1"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio1"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Rock</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio2"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio2"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio3"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio4"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio5"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Hip-Hop</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio3"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio3"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio3"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio3"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio3"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Latin</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio4"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio4"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio4"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio4"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio4"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Soul/Funk</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio5"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio5"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio5"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio5"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio5"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Hard Rock</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio6"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio6"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio6"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio6"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio6"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Electronic Music</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio7"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio7"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio7"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio7"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio7"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">New Age</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio8"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio8"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio8"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio8"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio8"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Folk Music</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio9"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio9"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio9"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio9"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio9"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Classical Music</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio10"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio10"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio10"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio10"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio10"></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Genre">Jazz/Blues</td>
+                            <td data-label="1"><input type="radio" value="1" name="radio11"></td>
+                            <td data-label="2"><input type="radio" value="2" name="radio11"></td>
+                            <td data-label="3"><input type="radio" value="3" name="radio11"></td>
+                            <td data-label="4"><input type="radio" value="4" name="radio11"></td>
+                            <td data-label="5"><input type="radio" value="5" name="radio11"></td>
+                        </tr>
+                    </tbody>
+                </table>
+           </fieldset>
+           <fieldset class="frequecy">
+                <legend>How often do you listen to music on a daily basis?</legend>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">Never</label>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">Once</label>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">2-3 times</label>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">4-7 times</label>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">8-10 times</label>
+                <input type="radio" name="frequency" id="frequency">
+                <label for="frequency">Constantly</label>
+           </fieldset>
+           <fieldset class="checkbox">
+                <legend>In what ways do you listen to music?</legend>
+                <input type="checkbox" value="spotify" id="spotify">
+                <label for="spotify">Spotify</label><br>
+                <input type="checkbox" value="sound_cloud" id="sound_cloud">
+                <label for="sound_cloud">Sound Cloud</label><br>
+                <input type="checkbox" value="MP3" id="MP3">
+                <label for="MP3">MP3/IPod</label><br>
+                <input type="checkbox" value="youtube" id="youtube">
+                <label for="youtube">YouTube</label><br>
+                <input type="checkbox" value="itunes" id="itunes">
+                <label for="itunes">iTunes/Music Purchasing Apps</label><br>
+                <input type="checkbox" value="music_channels" id="music_channels">
+                <label for="music_channels">Music Channels on TV</label><br>
+                <input type="checkbox" value="dvd_cd" id="dvd_cd">
+                <label for="dvd_cd">CDs and DVDs</label><br>
+           </fieldset>
+           <fieldset class="textarea">
+                <legend>Additional Comments:</legend>
+                <textarea id="comments" rows="7" placeholder="Say something.."></textarea>
+           </fieldset>
+           <br>
+           <div class="submit">
+               <input type="submit" value="Submit">
+           </div>
+       </form>
+       <footer class="footer">
+            <p> Created by: Jerick Borela, 2021</p>
+       </footer>
+   </div>
+    
+</body>
+</html>
