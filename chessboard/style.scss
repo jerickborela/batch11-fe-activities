@@ -1,0 +1,159 @@
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
+  background-image: url(purty_wood.png);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.header{
+  display: flex;
+  flex-direction: column;  
+  
+}
+
+.main{
+  height: 63vh;
+  width: 63vh;
+  display:grid;
+  grid-template-columns: 7vh auto;
+  grid-template-rows: 7vh auto;
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.top div, .left div{
+  width: 7vh;
+  height: 7vh;
+  text-align: center;
+  padding: 3vh;
+  
+}
+
+
+.left{
+  display:flex;
+  flex-direction: column-reverse;
+  grid-row: 2/3;
+  grid-column:1/2;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(8,7vh);
+    grid-template-rows: repeat(8,7vh);
+    border: 1px solid black;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.board {
+  div {
+        background: #d68204;
+        mix-blend-mode: color-burn;
+        opacity: 50%;
+    /* even children on odd rows, odd children on even rows */
+    @each $offset in 2 4 6 8 9 11 13 15 {
+      &:nth-child(16n + #{$offset}) {
+        background: #4a3c25; 
+        mix-blend-mode: luminosity; 
+        opacity: 60%;
+      }
+    }
+  }
+}
+.box{
+    width: 7vh;
+    grid-gap:0;
+    border: 1px solid black;
+    font-weight: bolder;
+    font-size: 3vh;
+    text-align: center;
+    padding: 1.5vh;
+}
+
+.box div{
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+#white-pawn5 div{
+  animation-name: mymove1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove1{
+  0%{bottom: 0vh;}
+  100%{bottom: 14vh;}
+}
+
+#black-pawn7 div{
+  animation-name: mymove2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove2 {
+  0%{top: 0vh;}
+  100%{top:14vh;}
+}
+
+#white-pawn4 div{
+  animation-name: mymove3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove3{
+  0%{bottom: 0vh;}
+  100%{bottom: 14vh;}
+}
+
+#black-pawn6 div{
+  animation-name: mymove4;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove4 {
+  0%{top: 0vh;}
+  100%{top:7vh;}
+}
+
+#white-queen div{
+  animation-name: mymove5;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove5 {
+  0%{bottom: 0vh; left:0vh;}
+  100%{bottom:28vh; left:28vh;}
+}
