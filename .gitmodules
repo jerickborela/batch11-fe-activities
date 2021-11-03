@@ -1,0 +1,3 @@
+[submodule "slack-api.react"]
+	path = slack-api.react
+	url = https://github.com/stanley-tarce/slack-api-react.git
