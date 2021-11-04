@@ -1,3 +1,6 @@
 [submodule "slack-api.react"]
 	path = slack-api.react
 	url = https://github.com/stanley-tarce/slack-api-react.git
+[submodule "Banking-"]
+	path = Banking-
+	url = https://github.com/Rpmedestomas/Banking-.git
