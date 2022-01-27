@@ -15,6 +15,34 @@ body {
     box-sizing: border-box;
 }
 
+// #modal-bg {
+//     height: 100%;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 999;
+//     top: 0%;
+// }
+
+// #firstPlayer {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
+// .pieces {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 60%;
+//     margin-top: 5%;
+// }
+
+// #pieceX, #pieceO {
+//     font-size: 50px;
+// }
+
 h1 {
     font-size: 60px;
 }
@@ -54,5 +82,11 @@ button {
     cursor: pointer;
     font-family: "Chalkduster";
     border: 0;
+}
+
+.controls {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
 }
 

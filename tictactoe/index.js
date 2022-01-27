@@ -2,10 +2,16 @@ const cells = Array.from(document.getElementsByClassName("cell"));
 const playerOne = 'X';
 const playerTwo = 'O';
 const gameText = document.getElementById('gameText');
-const currentState = [null,null,null,null,null,null,null,null,null];
+let currentState = [null,null,null,null,null,null,null,null,null];
+let controls = document.getElementsByClassName("controls");
 const resetBtn = document.getElementById("resetBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 let currentPlayer = playerOne;
 let turnCounter = 0;
+let history = [[],[],[],[],[],[],[],[],[]];
+let historyCopy = [];
+let saveMoves = [];
 
 const winPatterns = [
     [0, 1, 2],
@@ -17,6 +23,7 @@ const winPatterns = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
 
 
 
@@ -48,17 +55,29 @@ const initializeBoard = () => {
     })
 }
 
+/*adding click event on each cell and checking for win every click*/
 const clickCell = (e) => {
     const i= e.target.id;
     if(!currentState[i]){
         currentState[i] = currentPlayer;
         e.target.innerText = currentPlayer;
+        for(let g=0; g<currentState.length; g++){
+            history[turnCounter][g] = currentState[g];
+        }
         
-        if(checkWinner()){
+        console.log(history);
+        historyCopy = Array.from(history);
+        if(checkWinner()){ 
             gameText.innerText = `${currentPlayer} wins!`;
             for(let k=0; k<currentState.length; k++){
                 cells[k].removeEventListener('click', clickCell);
             }
+            removeBlank(history);
+            removeBlank(historyCopy);
+            controls[0].style.display="flex";
+            controls[0].style.justifyContent="space-around";
+            nextBtn.style.opacity = "0";
+            nextBtn.style.pointerEvents="none";
             return;
         }
         if(currentPlayer === playerOne){
@@ -70,7 +89,13 @@ const clickCell = (e) => {
         }
     }
     if(turnCounter === 9){
-        gameText.innerText = "DRAW!"
+        gameText.innerText = "DRAW!";
+        removeBlank(history);
+        removeBlank(historyCopy);
+        controls[0].style.display="flex";
+        controls[0].style.justifyContent="space-around";
+        nextBtn.style.opacity = "0";
+        nextBtn.style.pointerEvents="none";
     }
 }
 
@@ -86,21 +111,78 @@ const checkWinner = () => {
         }
         if (a === b && b === c) {
             winner = true;
-            // highlightWin(a,b,c);
             break;
         }
     }
     return winner;
 }
 
-// const highlightWin = (a,b,c) => {
-//     let a_win = document.getElementById(a);
-//     let b_win = document.getElementById(b);
-//     let c_win = document.getElementById(c);
-//     a_win.style.background = "green";
-//     b_win.style.background = "green";
-//     c_win.style.background = "green";
-// }
+
+const removeBlank = (arr) => {
+    for(let y=arr.length-1; y>=0; y--){
+        if(arr[y].length != 0){
+            return;
+        }else{
+           arr.pop();
+        }
+    }   
+}
+
+const goPrev = () => {
+    let ctr = historyCopy.length - 1;
+    currentState = [null,null,null,null,null,null,null,null,null];
+    nextBtn.style.opacity = "1";
+    nextBtn.style.pointerEvents="auto";
+    if(ctr == 0){
+        prevBtn.style.opacity = "0";
+        prevBtn.style.pointerEvents = "none";
+    }else if(ctr == 1){
+        ctr -= 1;
+        for(let n=0; n<9 ; n++){
+            currentState[n] = historyCopy[ctr][n];
+            document.getElementById(n).innerText = currentState[n];
+        }
+        historyCopy.pop();
+        prevBtn.style.opacity = "0";
+        prevBtn.style.pointerEvents = "none";
+    }else{
+        ctr -= 1;
+        for(let n=0; n<9 ; n++){
+            currentState[n] = historyCopy[ctr][n];
+            document.getElementById(n).innerText = currentState[n];
+        }
+        historyCopy.pop();
+        prevBtn.style.opacity = "1";
+        prevBtn.style.pointerEvents="auto";
+    }
+}
+
+const goNext = () => {
+    let ctr = historyCopy.length;
+    currentState = [null,null,null,null,null,null,null,null,null];
+    prevBtn.style.opacity = "1";
+        prevBtn.style.pointerEvents="auto";
+    if(ctr == history.length){
+        nextBtn.style.opacity = "0";
+        nextBtn.style.pointerEvents = "none";
+    }else if(ctr == history.length - 1){
+        historyCopy.push(history[ctr]);
+        for(let n=0; n<9; n++){
+            currentState[n] = historyCopy[ctr][n];
+            document.getElementById(n).innerText=currentState[n];
+        }
+        nextBtn.style.opacity = "0";
+        nextBtn.style.pointerEvents = "none";
+    }else{
+        historyCopy.push(history[ctr]);
+        for(let n=0; n<9; n++){
+            currentState[n] = historyCopy[ctr][n];
+            document.getElementById(n).innerText=currentState[n];
+        }
+        nextBtn.style.opacity = "1";
+    }
+}
+
 const resetBoard = () => {
     for(let h=0; h<currentState.length; h++){
         currentState[h] = null;
@@ -112,13 +194,15 @@ const resetBoard = () => {
     gameText.innerText = "Let's go!"
     currentPlayer = playerOne;
     turnCounter = 0;
+    history = [[],[],[],[],[],[],[],[],[]];
+    let historyCopy = [];
+    controls[0].style.display="none";
+    
+
     initializeBoard();
 }
 
-
+nextBtn.addEventListener('click',goNext);
+prevBtn.addEventListener('click',goPrev);
 resetBtn.addEventListener('click',resetBoard);
-
-
-
-
 initializeBoard();

@@ -52,4 +52,10 @@ button {
   border: 0;
 }
 
+.controls {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=style.css.map */
